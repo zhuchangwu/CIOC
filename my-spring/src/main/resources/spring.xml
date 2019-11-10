@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--根据类型自动装配-->
+<!-- default-autowire="byType"-->
+
+<!--跟进名称自动装配-->
+<!--default-autowire="byName"-->
+<beans  default-autowire="byName">
+
+    <!--自动装配的示例: -->
+    <bean id="DaoImpl" class="com.changwu.dao.DaoImpl1"></bean>
+    <bean id="service" class="com.changwu.service.UserServiceImpl5"></bean>
+
+
+    <!--根据setter方法完成注入示例: -->
+   <!-- <bean id="dao1" class="com.changwu.dao.DaoImpl1"></bean>
+   <bean id="service" class="com.changwu.service.UserServiceImpl4">
+        &lt;!&ndash;property表示set方法&ndash;&gt;
+        <property ref="dao1" name="daoImpl"></property>
+    </bean>-->
+
+
+    <!--根据构造方法完成注入示例:-->
+   <!-- <bean id="DaoImpl" class="com.changwu.dao.DaoImpl1"></bean>
+    <bean id="service" class="com.changwu.service.UserServiceImpl3">
+        &lt;!&ndash;constructor 表示使用构造方法注入&ndash;&gt;
+        <constructor-arg ref ="DaoImpl" name="DaoImpl1"></constructor-arg>
+    </bean>-->
+</beans>
